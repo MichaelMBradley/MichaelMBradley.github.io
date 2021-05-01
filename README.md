@@ -1,3 +1,5 @@
 # MichaelMBradley.github.io
 
-A personal website.
+A bare-bones personal website hosted on GitHub Pages.
+
+[Link](https://MichaelMBradley.github.io).
