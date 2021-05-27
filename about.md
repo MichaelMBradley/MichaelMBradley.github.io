@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 {: style="text-align:center"}
-![On a school trip to Japan](<https://images.weserv.nl/?url=https://michaelmbradley.github.io/assets/MichaelBradley.jpg&w=300&h=300&fit=cover&mask=circle>)
+![On a school trip to Japan](https://images.weserv.nl/?url=https://michaelmbradley.github.io/assets/MichaelBradley.jpg&w=300&h=300&fit=cover&mask=circle)
 
 Hi, my name is Michael Bradley and I've just finished my first year of computer science at Carleton University.
 
@@ -20,4 +20,4 @@ While I go to university in Ottawa, my hometown is Toronto.
 
 ### Back
 
-Back to the [main page]({{ site.baseurl }}{% link index.markdown %}).
+Back to the [main page](https://michaelmbradley.github.io/).

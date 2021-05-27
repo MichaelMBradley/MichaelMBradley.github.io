@@ -40,4 +40,4 @@ I made [this website](https://www.youtube.com/watch?v=dQw4w9WgXcQ) partially bec
 
 ### Back
 
-[Main page]({{ site.baseurl }}{% link index.markdown %})
+[Main page](https://michaelmbradley.github.io/)
