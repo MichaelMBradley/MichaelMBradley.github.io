@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Me
+title: Michael Bradley
 ---
 
 {: style="text-align:center"}
