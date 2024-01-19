@@ -1,53 +1,74 @@
 * {
-	font-family: sans-serif;
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
+	--bg-color: #222;
+	--highlight: var(--color6);
+	--primary: var(--color15);
+	color: var(--primary);
+	background: var(--bg-color);
+
+	/* Default kitty theme (https://sw.kovidgoyal.net/kitty/conf/#the-color-table) */
+	--color0: #000000;
+	--color8: #767676;
+	--color1: #cc0403;
+	--color9: #f2201f;
+	--color2:  #19cb00;
+	--color10: #23fd00;
+	--color3:  #cecb00;
+	--color11: #fffd00;
+	--color4:  #0d73cc;
+	--color12: #1a8fff;
+	--color5:  #cb1ed1;
+	--color13: #fd28ff;
+	--color6:  #0dcdcd;
+	--color14: #14ffff;
+	--color7:  #dddddd;
+	--color15: #ffffff;
 }
 
-.left-bar {
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	min-height: 90vh;
+}
+
+#fetch {
+	display: flex;
+	flex-direction: row;
+	column-gap: 1rem;
+	font-family: "JetBrains Mono", "monospace";
+}
+
+p {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+
+#michael-photo-container {
 	height: 100%;
-	width: 30%;
-	background: #101010;
-	text-align: center;
-	position: fixed;
-	top: 0;
-	left: 0;
-	margin: 0;
-	color: white;
+	padding-top: 1lh;
 }
 
-h1 {
-	margin: 2em;
+#michael-photo {
+	width: 15rem;
+	height: 15rem;
+	border-radius: 7.5rem;
+	object-fit: cover;
+	object-position: 0 10%;
 }
 
-.links {
-	background: white;
-	border-radius: 1em;
-	padding: 0.5em;
-	width: 20%;
-	bottom: 2em;
-	left: 5%;
+#basic-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
 }
 
-.left-bar a {
-	color: white;
-	text-underline: black;
+.text-highlight {
+	color: var(--highlight);
+	font-weight: bold;
 }
 
-.left-bar a:hover {
-	color: white;
-	text-underline: white;
-	text-emphasis: black;
-}
-
-.right-bar {
-	width: 70%;
-	color: black;
-	background-color: white;
-	position: fixed;
-	top: 0;
-	left: 30%;
-	padding: 2em;
+.whitespace {
+	white-space: pre;
 }
