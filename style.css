@@ -81,6 +81,14 @@ body {
 	--highlight: var(--color6);
 	color: var(--foreground);
 	background: var(--background);
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	min-height: 90vh;
+
+	transition: color 0.5s ease, background-color 0.5s ease;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -124,18 +132,12 @@ body {
 	}
 }
 
-body {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-evenly;
-	min-height: 90vh;
-}
-
 #dark-mode-toggle {
 	position: absolute;
 	top: 1rem;
 	right: 1rem;
+	width: 2rem;
+	height: 3rem;
 }
 
 body:has(#dark-mode-toggle:not(:checked)) {
