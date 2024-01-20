@@ -177,7 +177,9 @@ body:has(#dark-mode-toggle:not(:checked)) {
 
 	.dark-mode-svg {
 		transform: translate(16px, var(--main-toggle-transform));
-		transition: transform ease 0.5s;
+		@media (prefers-reduced-motion: no-preference) {
+			transition: transform ease 0.5s;
+		}
 	}
 }
 
@@ -203,7 +205,9 @@ body:has(#dark-mode-toggle:checked) {
 
 	.dark-mode-svg {
 		transform: translate(16px, var(--alt-toggle-transform));
-		transition: transform ease 0.5s;
+		@media (prefers-reduced-motion: no-preference) {
+			transition: transform ease 0.5s;
+		}
 	}
 }
 
@@ -258,5 +262,5 @@ br {
 	padding: 0;
 	margin: 0;
 	content: "";
-	line-height: 0;
+	line-height: calc(1lh - 1px);
 }
