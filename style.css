@@ -250,4 +250,9 @@ p {
 
 .blocks {
 	letter-spacing: -1px;
+	line-height: 1lh;
+	br {
+		padding: 0;
+		margin: 0;
+	}
 }
