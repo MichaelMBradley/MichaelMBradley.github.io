@@ -221,3 +221,7 @@ p {
 .whitespace {
 	white-space: pre;
 }
+
+.blocks {
+	letter-spacing: -1px;
+}
