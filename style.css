@@ -19,6 +19,8 @@ body {
 	--light-background: #eaeaea;
 	--light-foreground: #222221;
 
+	--light-toggle-transform: -768px;
+
 	/* Default kitty theme (https://sw.kovidgoyal.net/kitty/conf/#the-color-table) */
 	--dark-color0:  #000000;
 	--dark-color8:  #767676;
@@ -39,6 +41,8 @@ body {
 	--dark-foreground: #dddddd;
 	--dark-background: #000000;
 
+	--dark-toggle-transform: 0;
+
 	/* Default to light */
 	--main-color0:  var(--light-color0);
 	--main-color8:  var(--light-color8);
@@ -58,6 +62,7 @@ body {
 	--main-color15: var(--light-color15);
 	--main-foreground: var(--light-foreground);
 	--main-background: var(--light-background);
+	--main-toggle-transform: var(--light-toggle-transform);
 	--alt-color0:  var(--dark-color0);
 	--alt-color8:  var(--dark-color8);
 	--alt-color1:  var(--dark-color1);
@@ -76,6 +81,7 @@ body {
 	--alt-color15: var(--dark-color15);
 	--alt-foreground: var(--dark-foreground);
 	--alt-background: var(--dark-background);
+	--alt-toggle-transform: var(--dark-toggle-transform);
 
 	/* Actual useful styles */
 	--highlight: var(--color6);
@@ -111,6 +117,7 @@ body {
 		--main-color15: var(--dark-color15);
 		--main-foreground: var(--dark-foreground);
 		--main-background: var(--dark-background);
+		--main-toggle-transform: var(--dark-toggle-transform);
 		--alt-color0:  var(--light-color0);
 		--alt-color8:  var(--light-color8);
 		--alt-color1:  var(--light-color1);
@@ -129,15 +136,22 @@ body {
 		--alt-color15: var(--light-color15);
 		--alt-foreground: var(--light-foreground);
 		--alt-background: var(--light-background);
+		--alt-toggle-transform: var(--light-toggle-transform);
 	}
 }
 
-#dark-mode-toggle {
+#dark-mode-toggle-svg {
 	position: absolute;
 	top: 1rem;
 	right: 1rem;
-	width: 2rem;
-	height: 3rem;
+	width: 4rem;
+	height: 4rem;
+	overflow: hidden;
+	border-radius: 2rem;
+}
+
+#dark-mode-toggle {
+	display: none;
 }
 
 body:has(#dark-mode-toggle:not(:checked)) {
@@ -160,6 +174,11 @@ body:has(#dark-mode-toggle:not(:checked)) {
 	--color15: var(--main-color15) !important;
 	--foreground: var(--main-foreground) !important;
 	--background: var(--main-background) !important;
+
+	.dark-mode-svg {
+		transform: translate(0, var(--main-toggle-transform));
+		transition: transform ease 0.5s;
+	}
 }
 
 body:has(#dark-mode-toggle:checked) {
@@ -181,6 +200,11 @@ body:has(#dark-mode-toggle:checked) {
 	--color15: var(--alt-color15) !important;
 	--foreground: var(--alt-foreground) !important;
 	--background: var(--alt-background) !important;
+
+	.dark-mode-svg {
+		transform: translate(0, var(--alt-toggle-transform));
+		transition: transform ease 0.5s;
+	}
 }
 
 #fetch {
