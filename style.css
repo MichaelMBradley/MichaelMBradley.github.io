@@ -237,6 +237,9 @@ p {
 	object-fit: cover;
 	object-position: 0 10%;
 	border: 2px solid var(--highlight);
+	@media (prefers-reduced-motion: no-preference) {
+		transition: border ease 0.5s;
+	}
 }
 
 #basic-info {
@@ -265,4 +268,10 @@ br {
 	margin: 0;
 	content: "";
 	line-height: calc(1lh - 1px);
+}
+
+span {
+	@media (prefers-reduced-motion: no-preference) {
+		transition: color ease 0.5s;
+	}
 }
