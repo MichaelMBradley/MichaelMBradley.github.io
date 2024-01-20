@@ -1,27 +1,127 @@
-* {
-	--bg-color: #222;
-	--highlight: var(--color6);
-	--primary: var(--color15);
-	color: var(--primary);
-	background: var(--bg-color);
+body {
+	/* Material Light (https://github.com/dexpota/kitty-themes/blob/master/themes/Material.conf) */
+	--light-color0:  #212121;
+	--light-color8:  #424242;
+	--light-color1:  #b7141e;
+	--light-color9:  #e83a3f;
+	--light-color2:  #457b23;
+	--light-color10: #7aba39;
+	--light-color3:  #f5971d;
+	--light-color11: #fee92e;
+	--light-color4:  #134eb2;
+	--light-color12: #53a4f3;
+	--light-color5:  #550087;
+	--light-color13: #a94dbb;
+	--light-color6:  #0e707c;
+	--light-color14: #26bad1;
+	--light-color7:  #eeeeee;
+	--light-color15: #d8d8d8;
+	--light-background: #eaeaea;
+	--light-foreground: #222221;
 
 	/* Default kitty theme (https://sw.kovidgoyal.net/kitty/conf/#the-color-table) */
-	--color0: #000000;
-	--color8: #767676;
-	--color1: #cc0403;
-	--color9: #f2201f;
-	--color2:  #19cb00;
-	--color10: #23fd00;
-	--color3:  #cecb00;
-	--color11: #fffd00;
-	--color4:  #0d73cc;
-	--color12: #1a8fff;
-	--color5:  #cb1ed1;
-	--color13: #fd28ff;
-	--color6:  #0dcdcd;
-	--color14: #14ffff;
-	--color7:  #dddddd;
-	--color15: #ffffff;
+	--dark-color0:  #000000;
+	--dark-color8:  #767676;
+	--dark-color1:  #cc0403;
+	--dark-color9:  #f2201f;
+	--dark-color2:  #19cb00;
+	--dark-color10: #23fd00;
+	--dark-color3:  #cecb00;
+	--dark-color11: #fffd00;
+	--dark-color4:  #0d73cc;
+	--dark-color12: #1a8fff;
+	--dark-color5:  #cb1ed1;
+	--dark-color13: #fd28ff;
+	--dark-color6:  #0dcdcd;
+	--dark-color14: #14ffff;
+	--dark-color7:  #dddddd;
+	--dark-color15: #ffffff;
+	--dark-foreground: #dddddd;
+	--dark-background: #000000;
+
+	/* Default to light */
+	--main-color0:  var(--light-color0);
+	--main-color8:  var(--light-color8);
+	--main-color1:  var(--light-color1);
+	--main-color9:  var(--light-color9);
+	--main-color2:  var(--light-color2);
+	--main-color10: var(--light-color10);
+	--main-color3:  var(--light-color3);
+	--main-color11: var(--light-color11);
+	--main-color4:  var(--light-color4);
+	--main-color12: var(--light-color12);
+	--main-color5:  var(--light-color5);
+	--main-color13: var(--light-color13);
+	--main-color6:  var(--light-color6);
+	--main-color14: var(--light-color14);
+	--main-color7:  var(--light-color7);
+	--main-color15: var(--light-color15);
+	--main-foreground: var(--light-foreground);
+	--main-background: var(--light-background);
+	--alt-color0:  var(--dark-color0);
+	--alt-color8:  var(--dark-color8);
+	--alt-color1:  var(--dark-color1);
+	--alt-color9:  var(--dark-color9);
+	--alt-color2:  var(--dark-color2);
+	--alt-color10: var(--dark-color10);
+	--alt-color3:  var(--dark-color3);
+	--alt-color11: var(--dark-color11);
+	--alt-color4:  var(--dark-color4);
+	--alt-color12: var(--dark-color12);
+	--alt-color5:  var(--dark-color5);
+	--alt-color13: var(--dark-color13);
+	--alt-color6:  var(--dark-color6);
+	--alt-color14: var(--dark-color14);
+	--alt-color7:  var(--dark-color7);
+	--alt-color15: var(--dark-color15);
+	--alt-foreground: var(--dark-foreground);
+	--alt-background: var(--dark-background);
+
+	/* Actual useful styles */
+	--highlight: var(--color6);
+	color: var(--foreground);
+	background: var(--background);
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		--main-color0:  var(--dark-color0);
+		--main-color8:  var(--dark-color8);
+		--main-color1:  var(--dark-color1);
+		--main-color9:  var(--dark-color9);
+		--main-color2:  var(--dark-color2);
+		--main-color10: var(--dark-color10);
+		--main-color3:  var(--dark-color3);
+		--main-color11: var(--dark-color11);
+		--main-color4:  var(--dark-color4);
+		--main-color12: var(--dark-color12);
+		--main-color5:  var(--dark-color5);
+		--main-color13: var(--dark-color13);
+		--main-color6:  var(--dark-color6);
+		--main-color14: var(--dark-color14);
+		--main-color7:  var(--dark-color7);
+		--main-color15: var(--dark-color15);
+		--main-foreground: var(--dark-foreground);
+		--main-background: var(--dark-background);
+		--alt-color0:  var(--light-color0);
+		--alt-color8:  var(--light-color8);
+		--alt-color1:  var(--light-color1);
+		--alt-color9:  var(--light-color9);
+		--alt-color2:  var(--light-color2);
+		--alt-color10: var(--light-color10);
+		--alt-color3:  var(--light-color3);
+		--alt-color11: var(--light-color11);
+		--alt-color4:  var(--light-color4);
+		--alt-color12: var(--light-color12);
+		--alt-color5:  var(--light-color5);
+		--alt-color13: var(--light-color13);
+		--alt-color6:  var(--light-color6);
+		--alt-color14: var(--light-color14);
+		--alt-color7:  var(--light-color7);
+		--alt-color15: var(--light-color15);
+		--alt-foreground: var(--light-foreground);
+		--alt-background: var(--light-background);
+	}
 }
 
 body {
@@ -30,6 +130,55 @@ body {
 	align-items: center;
 	justify-content: space-evenly;
 	min-height: 90vh;
+}
+
+#dark-mode-toggle {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}
+
+body:has(#dark-mode-toggle:not(:checked)) {
+	/* Default to light */
+	--color0:  var(--main-color0) !important;
+	--color8:  var(--main-color8) !important;
+	--color1:  var(--main-color1) !important;
+	--color9:  var(--main-color9) !important;
+	--color2:  var(--main-color2) !important;
+	--color10: var(--main-color10) !important;
+	--color3:  var(--main-color3) !important;
+	--color11: var(--main-color11) !important;
+	--color4:  var(--main-color4) !important;
+	--color12: var(--main-color12) !important;
+	--color5:  var(--main-color5) !important;
+	--color13: var(--main-color13) !important;
+	--color6:  var(--main-color6) !important;
+	--color14: var(--main-color14) !important;
+	--color7:  var(--main-color7) !important;
+	--color15: var(--main-color15) !important;
+	--foreground: var(--main-foreground) !important;
+	--background: var(--main-background) !important;
+}
+
+body:has(#dark-mode-toggle:checked) {
+	--color0:  var(--alt-color0) !important;
+	--color8:  var(--alt-color8) !important;
+	--color1:  var(--alt-color1) !important;
+	--color9:  var(--alt-color9) !important;
+	--color2:  var(--alt-color2) !important;
+	--color10: var(--alt-color10) !important;
+	--color3:  var(--alt-color3) !important;
+	--color11: var(--alt-color11) !important;
+	--color4:  var(--alt-color4) !important;
+	--color12: var(--alt-color12) !important;
+	--color5:  var(--alt-color5) !important;
+	--color13: var(--alt-color13) !important;
+	--color6:  var(--alt-color6) !important;
+	--color14: var(--alt-color14) !important;
+	--color7:  var(--alt-color7) !important;
+	--color15: var(--alt-color15) !important;
+	--foreground: var(--alt-foreground) !important;
+	--background: var(--alt-background) !important;
 }
 
 #fetch {
