@@ -8,8 +8,15 @@
 <body>
 <input id="dark-mode-toggle" type="checkbox" aria-label="Toggle dark mode" />
 <label for="dark-mode-toggle" id="dark-mode-toggle-svg">
-	<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+	<svg viewBox="0 0 544 544" xmlns="http://www.w3.org/2000/svg">
+		<defs>
+			<linearGradient id="dark-mode-toggle-sky" x1="0" x2="0" y1="0.4" y2="0.6">
+				<stop offset="0%" stop-color="deepskyblue" />
+				<stop offset="100%" stop-color="black" />
+			</linearGradient>
+		</defs>
 		<!-- From: https://www.svgrepo.com/svg/484307/moon -->
+		<rect class="dark-mode-svg" height="1280" width="544" fill="url(#dark-mode-toggle-sky)" x="-16px" y="-16px"/>
 		<g class="dark-mode-svg">
 			<path transform="translate(0, 768)" style="fill: rgb(244, 244, 245); --darkreader-inline-fill: #e1dfdb;" d="M426.655,444.491c-85.064,74.278-206.9,83.839-299.319,29.581 c-22.308-13.074-42.982-29.907-60.958-50.499C56,411.723,46.93,399.058,39.085,385.82C15.143,345.045,3.539,298.958,3.784,252.953 c0.49-71.582,29.989-142.754,87.026-192.6C138.776,18.433,197.855-1.096,256.69,0.047c45.597,0.817,91.03,13.973,131.069,38.733 c22.063,13.564,42.41,30.724,60.305,51.153c9.724,11.114,18.386,22.799,25.822,34.974 C537.623,227.785,521.117,361.878,426.655,444.491z" />
 			<path transform="translate(0, 768)" style="fill: rgb(237, 237, 236); --darkreader-inline-fill: #dcd9d5;" d="M107.7,89.244c99.915-87.35,248.817-74.175,333.815,23.051 c84.998,97.226,75.388,243.379-24.528,330.729c-99.915,87.35-251.727,82.317-336.725-14.908S7.784,176.594,107.7,89.244z" />

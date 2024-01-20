@@ -19,7 +19,7 @@ body {
 	--light-background: #eaeaea;
 	--light-foreground: #222221;
 
-	--light-toggle-transform: -768px;
+	--light-toggle-transform: 16px;
 
 	/* Default kitty theme (https://sw.kovidgoyal.net/kitty/conf/#the-color-table) */
 	--dark-color0:  #000000;
@@ -41,7 +41,7 @@ body {
 	--dark-foreground: #dddddd;
 	--dark-background: #000000;
 
-	--dark-toggle-transform: 0;
+	--dark-toggle-transform: -768px;
 
 	/* Default to light */
 	--main-color0:  var(--light-color0);
@@ -142,12 +142,12 @@ body {
 
 #dark-mode-toggle-svg {
 	position: absolute;
-	top: 1rem;
-	right: 1rem;
-	width: 4rem;
-	height: 4rem;
+	top: 2rem;
+	right: 2rem;
+	width: 6rem;
+	height: 6rem;
 	overflow: hidden;
-	border-radius: 2rem;
+	border-radius: 3rem;
 }
 
 #dark-mode-toggle {
@@ -176,7 +176,7 @@ body:has(#dark-mode-toggle:not(:checked)) {
 	--background: var(--main-background) !important;
 
 	.dark-mode-svg {
-		transform: translate(0, var(--main-toggle-transform));
+		transform: translate(16px, var(--main-toggle-transform));
 		transition: transform ease 0.5s;
 	}
 }
@@ -202,7 +202,7 @@ body:has(#dark-mode-toggle:checked) {
 	--background: var(--alt-background) !important;
 
 	.dark-mode-svg {
-		transform: translate(0, var(--alt-toggle-transform));
+		transform: translate(16px, var(--alt-toggle-transform));
 		transition: transform ease 0.5s;
 	}
 }
@@ -230,6 +230,7 @@ p {
 	border-radius: 7.5rem;
 	object-fit: cover;
 	object-position: 0 10%;
+	border: 2px solid var(--highlight);
 }
 
 #basic-info {
