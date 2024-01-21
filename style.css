@@ -142,14 +142,20 @@ body {
 	}
 }
 
-#dark-mode-toggle-svg {
+#dark-mode-toggle-label {
 	position: absolute;
-	top: 2rem;
-	right: 2rem;
-	width: 6rem;
-	height: 6rem;
+	top: 1rem;
+	right: 1rem;
+	width: 2cm;
+	height: 2cm;
 	overflow: hidden;
-	border-radius: 3rem;
+	border-radius: 50%;
+	cursor: grab;
+	transition-duration: 0.5s;
+}
+
+#dark-mode-toggle-label:hover {
+	filter: brightness(85%);
 }
 
 #dark-mode-toggle {

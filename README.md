@@ -9,4 +9,3 @@ Contains some basic information about me along with some of my interests.
   * Projects
   * Co-ops
   * Skills
-* Stylize dark mode toggle (CSS `element()`?)
