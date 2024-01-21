@@ -88,10 +88,15 @@ body {
 	color: var(--foreground);
 	background: var(--background);
 
+	--content-gap: 10rem;
+
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-evenly;
+	justify-content: space-around;
+	row-gap: var(--content-gap);
+	padding-top: var(--content-gap);
+	padding-bottom: var(--content-gap);
 	min-height: 100vh;
 	margin: 0;
 
@@ -238,9 +243,9 @@ p {
 }
 
 #michael-photo {
-	width: 15rem;
-	height: 15rem;
-	border-radius: 7.5rem;
+	width: 10lh;
+	height: 10lh;
+	border-radius: 50%;
 	object-fit: cover;
 	object-position: 0 10%;
 	border: 2px solid var(--highlight);
@@ -281,4 +286,26 @@ span {
 	@media (prefers-reduced-motion: no-preference) {
 		transition: color ease 0.5s;
 	}
+}
+
+.name-description-timeframe {
+	display: flex;
+	flex-direction: row;
+}
+
+.name-description-link {
+	display: flex;
+	flex-direction: row;
+}
+
+.name-description-grade {
+	display: flex;
+	flex-direction: row;
+}
+
+#droste {
+	background: -moz-element(#fetch) no-repeat;
+	width: 192px;
+	height: 80px;
+	background-size: contain;
 }
