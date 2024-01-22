@@ -95,8 +95,9 @@ body {
 	align-items: center;
 	justify-content: space-around;
 	row-gap: var(--content-gap);
-	padding-top: var(--content-gap);
-	padding-bottom: var(--content-gap);
+	/*padding-top: var(--content-gap);*/
+	/*padding-bottom: var(--content-gap);*/
+	overflow: hidden;
 	min-height: 100vh;
 	margin: 0;
 
@@ -286,6 +287,10 @@ span {
 	@media (prefers-reduced-motion: no-preference) {
 		transition: color ease 0.5s;
 	}
+}
+
+.info-section {
+	display: none;
 }
 
 .name-description-timeframe {
