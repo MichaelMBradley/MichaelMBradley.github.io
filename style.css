@@ -95,11 +95,11 @@ body {
 	align-items: center;
 	justify-content: space-around;
 	row-gap: var(--content-gap);
-	/*padding-top: var(--content-gap);*/
-	/*padding-bottom: var(--content-gap);*/
-	overflow: hidden;
+	padding-top: var(--content-gap);
+	padding-bottom: var(--content-gap);
 	min-height: 100vh;
 	margin: 0;
+	font-family: sans-serif;
 
 	@media (prefers-reduced-motion: no-preference) {
 		transition: color 0.5s ease, background-color 0.5s ease;
@@ -238,20 +238,37 @@ p {
 	margin-block-end: 0;
 }
 
+.indent {
+	text-indent: 2lh;
+}
+
 #michael-photo-container {
 	height: 100%;
 	padding-top: 1lh;
 }
 
 #michael-photo {
-	width: 10lh;
-	height: 10lh;
+	width: 11lh;
+	height: 11lh;
 	border-radius: 50%;
 	object-fit: cover;
 	object-position: 0 10%;
 	border: 2px solid var(--highlight);
 	@media (prefers-reduced-motion: no-preference) {
 		transition: border ease 0.5s;
+	}
+
+	:active {
+		animation: spin 1s linear infinite forwards;
+	}
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
 	}
 }
 
@@ -289,28 +306,65 @@ span {
 	}
 }
 
+h1, h2 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
 .info-section {
-	display: none;
+	margin-left: 5rem;
+	margin-right: 5rem;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 2rem;
 }
 
-.name-description-timeframe {
+.info-group {
 	display: flex;
-	flex-direction: row;
-}
-
-.name-description-link {
-	display: flex;
-	flex-direction: row;
-}
-
-.name-description-grade {
-	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 0.5rem;
+	a > img {
+		max-width: 20rem;
+		max-height: 15rem;
+	}
 }
 
 #droste {
-	background: -moz-element(#fetch) no-repeat;
-	width: 192px;
-	height: 80px;
-	background-size: contain;
+	@supports (background: element(#fetch)) {
+		background: element(#fetch) no-repeat;
+	}
+	@supports (background: -moz-element(#fetch)) {
+		background: -moz-element(#fetch) no-repeat;
+	}
+	@supports (background: element(#fetch)) or (background: -moz-element(#fetch)) {
+		width: 20rem;
+		height: 8rem;
+		background-size: 100%;
+	}
+}
+
+p {
+	text-align: justify;
+}
+
+.invisible-div {
+	margin: 0;
+	padding: 0;
+	border-width: 0;
+	@media print {
+		padding: 1rem;
+	}
+}
+
+.links {
+	display: flex;
+	flex-direction: row;
+	column-gap: 3rem;
+	a > svg {
+		fill: var(--foreground);
+		transition: fill 0.5s ease;
+	}
 }
