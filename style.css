@@ -245,6 +245,10 @@ p {
 #michael-photo-container {
 	height: 100%;
 	padding-top: 1lh;
+
+	:active {
+		animation: spin 1s linear infinite forwards;
+	}
 }
 
 #michael-photo {
@@ -256,10 +260,6 @@ p {
 	border: 2px solid var(--highlight);
 	@media (prefers-reduced-motion: no-preference) {
 		transition: border ease 0.5s;
-	}
-
-	:active {
-		animation: spin 1s linear infinite forwards;
 	}
 }
 
