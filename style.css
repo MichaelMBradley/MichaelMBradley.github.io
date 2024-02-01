@@ -106,6 +106,175 @@ body {
 	@media (prefers-reduced-motion: no-preference) {
 		transition: color var(--anim-duration) ease, background-color var(--anim-duration) ease;
 	}
+
+	backdrop-filter: blur(0.15rem);
+
+	--color-a: #FF000002;
+	--color-b: #00FF0002;
+	--color-c: #0000FF03;
+
+	--bg-unit: 1rem;
+	--bg-half-tri-height: calc(var(--bg-unit) * sqrt(3) / 4);
+	--bg-tri-height: calc(var(--bg-half-tri-height) * 2);
+	--bg-width: calc(var(--bg-unit) * 2 + var(--bg-tri-height) * 2);
+	--bg-height: calc(var(--bg-unit) * 3 + var(--bg-tri-height) * 4);
+	background-size: var(--bg-width) var(--bg-height);
+
+	--ht: var(--bg-half-tri-height);
+	background-position:
+		calc((var(--bg-width) - var(--bg-unit)) / 2) 0,
+		calc((var(--bg-width) - var(--bg-unit)) / 2) 0,
+		calc(var(--bg-width) / 2) calc(var(--bg-height) - var(--bg-tri-height)),
+		calc(var(--bg-width) / 2) calc(var(--bg-height) - var(--bg-tri-height)),
+		calc((var(--bg-width) + var(--bg-unit)) / 2) 0,
+		calc((var(--bg-width) + var(--bg-unit)) / 2) 0,
+
+		0 calc(var(--bg-height) / 2 + var(--bg-tri-height)),
+		calc(var(--bg-unit) / 2) calc(var(--bg-height) / 2),
+		calc(var(--bg-unit) / 2) calc(var(--bg-height) / 2),
+		calc(var(--bg-unit) / 2) calc(var(--bg-height) / 2),
+		calc(var(--bg-unit) / 2) calc(var(--bg-height) / 2),
+		0 calc(var(--bg-height) / 2 - var(--bg-tri-height)),
+
+		0 calc(var(--bg-height) / 2 + var(--bg-tri-height)),
+		calc(var(--bg-width) - var(--bg-unit) / 2) calc(var(--bg-height) / 2),
+		calc(var(--bg-width) - var(--bg-unit) / 2) calc(var(--bg-height) / 2),
+		calc(var(--bg-width) - var(--bg-unit) / 2) calc(var(--bg-height) / 2),
+		calc(var(--bg-width) - var(--bg-unit) / 2) calc(var(--bg-height) / 2),
+		0 calc(var(--bg-height) / 2 - var(--bg-tri-height)),
+
+		calc((var(--bg-width) - var(--bg-unit)) / 2) 0,
+		calc((var(--bg-width) - var(--bg-unit)) / 2) 0,
+		calc(var(--bg-width) / 2) var(--bg-tri-height),
+		calc(var(--bg-width) / 2) var(--bg-tri-height),
+		calc((var(--bg-width) + var(--bg-unit)) / 2) 0,
+		calc((var(--bg-width) + var(--bg-unit)) / 2) 0,
+
+		0 calc(var(--bg-height) - var(--bg-tri-height) - var(--bg-unit) / 2),
+		var(--bg-width) calc(var(--bg-height) - var(--bg-tri-height) - var(--bg-unit) / 2),
+
+		calc(var(--bg-width) / 2) calc(var(--bg-height) - var(--bg-unit) - var(--bg-tri-height)),
+		calc(var(--bg-width) / 2) calc(var(--bg-height) - var(--bg-unit) - var(--bg-tri-height)),
+
+		calc(var(--bg-width) / 2) calc(var(--bg-unit) + var(--bg-tri-height)),
+		calc(var(--bg-width) / 2) calc(var(--bg-unit) + var(--bg-tri-height)),
+
+		0 calc(var(--bg-tri-height) + var(--bg-unit) / 2),
+		var(--bg-width) calc(var(--bg-tri-height) + var(--bg-unit) / 2),
+
+		calc(var(--bg-tri-height) + var(--bg-unit) / 2) calc(var(--bg-unit) / -2 - var(--bg-tri-height)),
+		calc(var(--bg-tri-height) + var(--bg-unit) / 2) calc(var(--bg-unit) / -2 - var(--bg-tri-height)),
+		calc(var(--bg-unit) / 2) calc(-1 * var(--bg-unit) - var(--bg-tri-height)),
+		calc(var(--bg-unit) / 2) calc(-1 * var(--bg-unit) - var(--bg-tri-height)),
+
+		calc(var(--bg-unit) * 3 / 2 + var(--bg-tri-height)) calc(var(--bg-unit) / -2 - var(--bg-tri-height)),
+		calc(var(--bg-unit) * 3 / 2 + var(--bg-tri-height)) calc(var(--bg-unit) / -2 - var(--bg-tri-height)),
+		calc(var(--bg-width) - var(--bg-unit) / 2) calc(-1 * var(--bg-unit) - var(--bg-tri-height)),
+		calc(var(--bg-width) - var(--bg-unit) / 2) calc(-1 * var(--bg-unit) - var(--bg-tri-height)),
+
+		calc(var(--bg-unit) + var(--bg-tri-height)) calc(var(--bg-unit) * 3 / 2 + var(--bg-tri-height) * 2),
+		calc(var(--bg-unit) + var(--bg-tri-height)) calc(var(--bg-unit) * 3 / 2 + var(--bg-tri-height) * 2),
+		calc(var(--bg-unit) + var(--bg-tri-height)) calc(var(--bg-unit) * 3 / 2 + var(--bg-tri-height) * 2),
+		calc(var(--bg-unit) + var(--bg-tri-height)) calc(var(--bg-unit) * 3 / 2 + var(--bg-tri-height) * 2),
+
+		calc(var(--bg-unit) / 2) calc(var(--bg-unit) + var(--bg-tri-height)),
+		calc(var(--bg-unit) / 2) calc(var(--bg-unit) + var(--bg-tri-height)),
+		calc(var(--bg-unit) / 2 + var(--bg-tri-height)) calc(var(--bg-unit) / 2 + var(--bg-tri-height)),
+		calc(var(--bg-unit) / 2 + var(--bg-tri-height)) calc(var(--bg-unit) / 2 + var(--bg-tri-height)),
+
+		calc(var(--bg-unit) * 3 / 2 + var(--bg-tri-height) * 2) calc(var(--bg-unit) + var(--bg-tri-height)),
+		calc(var(--bg-unit) * 3 / 2 + var(--bg-tri-height) * 2) calc(var(--bg-unit) + var(--bg-tri-height)),
+		calc(var(--bg-unit) * 3 / 2 + var(--bg-tri-height)) calc(var(--bg-unit) / 2 + var(--bg-tri-height)),
+		calc(var(--bg-unit) * 3 / 2 + var(--bg-tri-height)) calc(var(--bg-unit) / 2 + var(--bg-tri-height)),
+
+		0 0,
+		0 0,
+		0 0,
+		0 0;
+	background-image:
+			/* Bottom hex top */
+		linear-gradient(300deg, var(--color-a) var(--ht), transparent var(--ht)),
+		linear-gradient(60deg, var(--color-a) var(--ht), transparent var(--ht)),
+		linear-gradient(240deg, var(--color-a) var(--ht), transparent var(--ht)),
+		linear-gradient(120deg, var(--color-a) var(--ht), transparent var(--ht)),
+		linear-gradient(300deg, var(--color-a) var(--ht), transparent var(--ht)),
+		linear-gradient(60deg, var(--color-a) var(--ht), transparent var(--ht)),
+
+			/* Left hex right */
+		linear-gradient(60deg, var(--color-a) var(--ht), transparent var(--ht)),
+		linear-gradient(240deg, var(--color-a) var(--ht), transparent var(--ht)),
+		linear-gradient(120deg, var(--color-a) var(--ht), transparent var(--ht)),
+		linear-gradient(60deg, var(--color-a) var(--ht), transparent var(--ht)),
+		linear-gradient(300deg, var(--color-a) var(--ht), transparent var(--ht)),
+		linear-gradient(120deg, var(--color-a) var(--ht), transparent var(--ht)),
+
+			/* Right hex left */
+		linear-gradient(300deg, var(--color-a) var(--ht), transparent var(--ht)),
+		linear-gradient(240deg, var(--color-a) var(--ht), transparent var(--ht)),
+		linear-gradient(120deg, var(--color-a) var(--ht), transparent var(--ht)),
+		linear-gradient(60deg, var(--color-a) var(--ht), transparent var(--ht)),
+		linear-gradient(300deg, var(--color-a) var(--ht), transparent var(--ht)),
+		linear-gradient(240deg, var(--color-a) var(--ht), transparent var(--ht)),
+
+			/* Top hex bottom */
+		linear-gradient(240deg, var(--color-a) var(--ht), transparent var(--ht)),
+		linear-gradient(120deg, var(--color-a) var(--ht), transparent var(--ht)),
+		linear-gradient(300deg, var(--color-a) var(--ht), transparent var(--ht)),
+		linear-gradient(60deg, var(--color-a) var(--ht), transparent var(--ht)),
+		linear-gradient(240deg, var(--color-a) var(--ht), transparent var(--ht)),
+		linear-gradient(120deg, var(--color-a) var(--ht), transparent var(--ht)),
+
+			/* Bottom side tri */
+		linear-gradient(120deg, var(--color-b) var(--ht), transparent var(--ht)),
+		linear-gradient(240deg, var(--color-b) var(--ht), transparent var(--ht)),
+
+			/* Bottom mid tri */
+		linear-gradient(300deg, var(--color-b) var(--ht), transparent var(--ht)),
+		linear-gradient(60deg, var(--color-b) var(--ht), transparent var(--ht)),
+
+			/* Top mid tri */
+		linear-gradient(240deg, var(--color-b) var(--ht), transparent var(--ht)),
+		linear-gradient(120deg, var(--color-b) var(--ht), transparent var(--ht)),
+
+			/* Bottom hex top */
+		linear-gradient(300deg, var(--color-b) var(--ht), transparent var(--ht)),
+		linear-gradient(60deg, var(--color-b) var(--ht), transparent var(--ht)),
+
+			/* Bottom left para */
+		linear-gradient(210deg, var(--color-c) var(--ht), transparent var(--ht)),
+		linear-gradient(330deg, var(--color-c) var(--ht), transparent var(--ht)),
+		linear-gradient(150deg, var(--color-c) var(--ht), transparent var(--ht)),
+		linear-gradient(30deg, var(--color-c) var(--ht), transparent var(--ht)),
+
+			/* Bottom right para */
+		linear-gradient(150deg, var(--color-c) var(--ht), transparent var(--ht)),
+		linear-gradient(30deg, var(--color-c) var(--ht), transparent var(--ht)),
+		linear-gradient(210deg, var(--color-c) var(--ht), transparent var(--ht)),
+		linear-gradient(330deg, var(--color-c) var(--ht), transparent var(--ht)),
+
+			/* Middle para */
+		linear-gradient(210deg, var(--color-c) var(--ht), transparent var(--ht)),
+		linear-gradient(330deg, var(--color-c) var(--ht), transparent var(--ht)),
+		linear-gradient(150deg, var(--color-c) var(--ht), transparent var(--ht)),
+		linear-gradient(30deg, var(--color-c) var(--ht), transparent var(--ht)),
+
+			/* Top left para */
+		linear-gradient(150deg, var(--color-c) var(--ht), transparent var(--ht)),
+		linear-gradient(30deg, var(--color-c) var(--ht), transparent var(--ht)),
+		linear-gradient(210deg, var(--color-c) var(--ht), transparent var(--ht)),
+		linear-gradient(330deg, var(--color-c) var(--ht), transparent var(--ht)),
+
+			/* Top right para */
+		linear-gradient(210deg, var(--color-c) var(--ht), transparent var(--ht)),
+		linear-gradient(330deg, var(--color-c) var(--ht), transparent var(--ht)),
+		linear-gradient(150deg, var(--color-c) var(--ht), transparent var(--ht)),
+		linear-gradient(30deg, var(--color-c) var(--ht), transparent var(--ht)),
+
+			/* Corner para */
+		linear-gradient(210deg, var(--color-c) var(--ht), transparent var(--ht)),
+		linear-gradient(330deg, var(--color-c) var(--ht), transparent var(--ht)),
+		linear-gradient(150deg, var(--color-c) var(--ht), transparent var(--ht)),
+		linear-gradient(30deg, var(--color-c) var(--ht), transparent var(--ht));
 }
 
 @media (prefers-color-scheme: dark) {
