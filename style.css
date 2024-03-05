@@ -109,7 +109,7 @@ body {
 
 	backdrop-filter: blur(0.15rem);
 
-	--color-a: #FF000002;
+	/*--color-a: #FF000002;
 	--color-b: #00FF0002;
 	--color-c: #0000FF03;
 
@@ -192,7 +192,7 @@ body {
 		0 0,
 		0 0;
 	background-image:
-			/* Bottom hex top */
+			/* Bottom hex top
 		linear-gradient(300deg, var(--color-a) var(--ht), transparent var(--ht)),
 		linear-gradient(60deg, var(--color-a) var(--ht), transparent var(--ht)),
 		linear-gradient(240deg, var(--color-a) var(--ht), transparent var(--ht)),
@@ -200,7 +200,7 @@ body {
 		linear-gradient(300deg, var(--color-a) var(--ht), transparent var(--ht)),
 		linear-gradient(60deg, var(--color-a) var(--ht), transparent var(--ht)),
 
-			/* Left hex right */
+			/* Left hex right
 		linear-gradient(60deg, var(--color-a) var(--ht), transparent var(--ht)),
 		linear-gradient(240deg, var(--color-a) var(--ht), transparent var(--ht)),
 		linear-gradient(120deg, var(--color-a) var(--ht), transparent var(--ht)),
@@ -208,7 +208,7 @@ body {
 		linear-gradient(300deg, var(--color-a) var(--ht), transparent var(--ht)),
 		linear-gradient(120deg, var(--color-a) var(--ht), transparent var(--ht)),
 
-			/* Right hex left */
+			/* Right hex left
 		linear-gradient(300deg, var(--color-a) var(--ht), transparent var(--ht)),
 		linear-gradient(240deg, var(--color-a) var(--ht), transparent var(--ht)),
 		linear-gradient(120deg, var(--color-a) var(--ht), transparent var(--ht)),
@@ -216,7 +216,7 @@ body {
 		linear-gradient(300deg, var(--color-a) var(--ht), transparent var(--ht)),
 		linear-gradient(240deg, var(--color-a) var(--ht), transparent var(--ht)),
 
-			/* Top hex bottom */
+			/* Top hex bottom
 		linear-gradient(240deg, var(--color-a) var(--ht), transparent var(--ht)),
 		linear-gradient(120deg, var(--color-a) var(--ht), transparent var(--ht)),
 		linear-gradient(300deg, var(--color-a) var(--ht), transparent var(--ht)),
@@ -224,57 +224,57 @@ body {
 		linear-gradient(240deg, var(--color-a) var(--ht), transparent var(--ht)),
 		linear-gradient(120deg, var(--color-a) var(--ht), transparent var(--ht)),
 
-			/* Bottom side tri */
+			/* Bottom side tri
 		linear-gradient(120deg, var(--color-b) var(--ht), transparent var(--ht)),
 		linear-gradient(240deg, var(--color-b) var(--ht), transparent var(--ht)),
 
-			/* Bottom mid tri */
+			/* Bottom mid tri
 		linear-gradient(300deg, var(--color-b) var(--ht), transparent var(--ht)),
 		linear-gradient(60deg, var(--color-b) var(--ht), transparent var(--ht)),
 
-			/* Top mid tri */
+			/* Top mid tri
 		linear-gradient(240deg, var(--color-b) var(--ht), transparent var(--ht)),
 		linear-gradient(120deg, var(--color-b) var(--ht), transparent var(--ht)),
 
-			/* Bottom hex top */
+			/* Bottom hex top
 		linear-gradient(300deg, var(--color-b) var(--ht), transparent var(--ht)),
 		linear-gradient(60deg, var(--color-b) var(--ht), transparent var(--ht)),
 
-			/* Bottom left para */
+			/* Bottom left para
 		linear-gradient(210deg, var(--color-c) var(--ht), transparent var(--ht)),
 		linear-gradient(330deg, var(--color-c) var(--ht), transparent var(--ht)),
 		linear-gradient(150deg, var(--color-c) var(--ht), transparent var(--ht)),
 		linear-gradient(30deg, var(--color-c) var(--ht), transparent var(--ht)),
 
-			/* Bottom right para */
+			/* Bottom right para
 		linear-gradient(150deg, var(--color-c) var(--ht), transparent var(--ht)),
 		linear-gradient(30deg, var(--color-c) var(--ht), transparent var(--ht)),
 		linear-gradient(210deg, var(--color-c) var(--ht), transparent var(--ht)),
 		linear-gradient(330deg, var(--color-c) var(--ht), transparent var(--ht)),
 
-			/* Middle para */
+			/* Middle para
 		linear-gradient(210deg, var(--color-c) var(--ht), transparent var(--ht)),
 		linear-gradient(330deg, var(--color-c) var(--ht), transparent var(--ht)),
 		linear-gradient(150deg, var(--color-c) var(--ht), transparent var(--ht)),
 		linear-gradient(30deg, var(--color-c) var(--ht), transparent var(--ht)),
 
-			/* Top left para */
+			/* Top left para
 		linear-gradient(150deg, var(--color-c) var(--ht), transparent var(--ht)),
 		linear-gradient(30deg, var(--color-c) var(--ht), transparent var(--ht)),
 		linear-gradient(210deg, var(--color-c) var(--ht), transparent var(--ht)),
 		linear-gradient(330deg, var(--color-c) var(--ht), transparent var(--ht)),
 
-			/* Top right para */
+			/* Top right para
 		linear-gradient(210deg, var(--color-c) var(--ht), transparent var(--ht)),
 		linear-gradient(330deg, var(--color-c) var(--ht), transparent var(--ht)),
 		linear-gradient(150deg, var(--color-c) var(--ht), transparent var(--ht)),
 		linear-gradient(30deg, var(--color-c) var(--ht), transparent var(--ht)),
 
-			/* Corner para */
+			/* Corner para
 		linear-gradient(210deg, var(--color-c) var(--ht), transparent var(--ht)),
 		linear-gradient(330deg, var(--color-c) var(--ht), transparent var(--ht)),
 		linear-gradient(150deg, var(--color-c) var(--ht), transparent var(--ht)),
-		linear-gradient(30deg, var(--color-c) var(--ht), transparent var(--ht));
+		linear-gradient(30deg, var(--color-c) var(--ht), transparent var(--ht));*/
 }
 
 @media (prefers-color-scheme: dark) {
