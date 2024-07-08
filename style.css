@@ -321,10 +321,14 @@ h1, h2 {
 	margin-left: 5rem;
 	margin-right: 5rem;
 
-	display: flex;
+	display: none;
 	flex-direction: column;
 	align-items: center;
 	row-gap: 2rem;
+}
+
+a:target + a + .info-section {
+	display: flex;
 }
 
 .info-group {
