@@ -1,6 +1,6 @@
-# [MichaelMBradley.github.io](https://MichaelMBradley.github.io)
+# [mmbradley.ca](https://mmbradley.ca)
 
-A basic static personal website hosted on GitHub Pages.
+A basic static personal website.
 Contains some basic information about me along with some of my interests.
 
 ## TODO
