@@ -1,12 +1,11 @@
 #!/bin/sh
 
-script_dirname="$(dirname "$0")"
-script_location="$(realpath "$0")"
+if [ "$#" != "1" -o ! -d "$1" ]; then
+  echo "Must provide directory to minimize"
+  exit 1
+fi
 
-for file in "$script_dirname"/**; do
-  if [ "$(realpath "$file")" = "$script_location" ]; then
-    continue
-  fi
+for file in "$1"/**; do
   file_dirname="$(dirname "$file")"
   file_basename="$(basename "$file")"
   file_name="${file_basename%%.*}"
