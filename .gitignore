@@ -1,1 +1,7 @@
 .idea/
+
+# Ignore all but original assets
+assets/
+!assets/HolidayCard.png
+!assets/MichaelBradley.jpeg
+!assets/thumb.png
