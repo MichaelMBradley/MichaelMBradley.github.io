@@ -3,20 +3,23 @@
 <head>
 	<meta charset="UTF-8" />
 	<link rel="stylesheet" href="style.css" />
-	<link href="https://fonts.cdnfonts.com/css/jetbrains-mono" rel="stylesheet" />
+	<!--TODO: Optimize loading?-->
+	<!--<link href="https://fonts.cdnfonts.com/css/jetbrains-mono" rel="stylesheet" />-->
 	<title>Michael Bradley</title>
 	<meta lang="EN" />
 
 	<meta name="color-scheme" content="dark light" />
-	<meta name="theme-color" content="#000000" />
+	<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+	<meta name="theme-color" content="#eaeaea" media="(prefers-color-scheme: light)" />
 
 	<!--TODO: Find better icon than GH avatar-->
 	<!--<link rel="icon" href="https://avatars.githubusercontent.com/u/68788583?s=48&v=4" />-->
-	<meta name="keywords" content="Michael Bradley,personal website,student,co-op,coop,cooperative education,programmer,coder,software developer" />
+	<link rel="icon" href="data:,">
+	<meta name="keywords" content="Michael Bradley,personal website,programmer,coder,software developer" />
 	<meta name="description" content="Michael Bradley's personal website" />
 	<meta name="subject" content="Self-advertisement" />
 	<meta name="robots" content="index,follow" />
-	<meta name="summary" content="Michael Bradley is a skilled developer looking for a co-op job this summer" />
+	<meta name="summary" content="Michael Bradley is a graduating CS student looking for a full-time job starting in February" />
 	<meta name="url" content="https://mmbradley.ca" />
 
 	<meta property="og:type" content="website" />
@@ -27,11 +30,11 @@
 
 	<meta property="og:url" content="https://mmbradley.ca" />
 	<meta property="og:site" content="Michael Bradley" />
-	<meta property="og:title" content="Michael's Personal website" />
+	<meta property="og:title" content="Michael's personal website" />
 	<meta property="og:description" content="A summary of my education, skills, and some projects I've worked on." />
-	<meta property="og:image" content="https://mmbradley.ca/assets/thumb.png" />
-	<meta property="og:image:secure_url" content="https://mmbradley.ca/assets/thumb.png" />
-	<meta property="og:image:alt" content="Michael Bradley is a skilled developer looking for a co-op job this summer." />
+	<meta property="og:image" content="https://mmbradley.ca/assets/thumb.webp" />
+	<meta property="og:image:secure_url" content="https://mmbradley.ca/assets/thumb.webp" />
+	<meta property="og:image:alt" content="Michael Bradley is a CS student looking for a full-time job starting in February" />
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:width" content="4203" />
 	<meta property="og:image:height" content="2253" />
@@ -39,7 +42,7 @@
 	<meta name="twitter:url" content="https://mmbradley.ca" />
 	<meta name="twitter:title" content="Michael Bradley" />
 	<meta name="twitter:description" content="My personal website." />
-	<meta name="twitter:image" content="https://mmbradley.ca/assets/thumb.png" />
+	<meta name="twitter:image" content="https://mmbradley.ca/assets/thumb.webp" />
 	<meta name="twitter:card" content="summary_large_image" />
 </head>
 <body>
@@ -55,6 +58,7 @@
 		<!-- From: https://www.svgrepo.com/svg/484307/moon -->
 		<rect class="dark-mode-svg" height="1280" width="544" fill="url(#dark-mode-toggle-sky)" x="-16px" y="-16px"/>
 		<g class="dark-mode-svg">
+			<!--TODO: Is this supposed to have the darkreader references?-->
 			<path transform="translate(0, 768)" style="fill: rgb(244, 244, 245); --darkreader-inline-fill: #e1dfdb;" d="M426.655,444.491c-85.064,74.278-206.9,83.839-299.319,29.581 c-22.308-13.074-42.982-29.907-60.958-50.499C56,411.723,46.93,399.058,39.085,385.82C15.143,345.045,3.539,298.958,3.784,252.953 c0.49-71.582,29.989-142.754,87.026-192.6C138.776,18.433,197.855-1.096,256.69,0.047c45.597,0.817,91.03,13.973,131.069,38.733 c22.063,13.564,42.41,30.724,60.305,51.153c9.724,11.114,18.386,22.799,25.822,34.974 C537.623,227.785,521.117,361.878,426.655,444.491z" />
 			<path transform="translate(0, 768)" style="fill: rgb(237, 237, 236); --darkreader-inline-fill: #dcd9d5;" d="M107.7,89.244c99.915-87.35,248.817-74.175,333.815,23.051 c84.998,97.226,75.388,243.379-24.528,330.729c-99.915,87.35-251.727,82.317-336.725-14.908S7.784,176.594,107.7,89.244z" />
 			<path transform="translate(0, 768)" style="fill: rgb(216, 216, 216); --darkreader-inline-fill: #cfcbc5;" d="M244.029,141.49c-17.92,37.27-63.032,51.341-100.302,33.421 c-37.27-17.92-53.234-61.357-35.315-98.627c17.92-37.27,62.835-54.046,100.105-36.126 C245.787,58.078,261.948,104.22,244.029,141.49z" />
@@ -102,219 +106,66 @@
 		</g>
 	</svg>
 </label>
-<div id="fetch">
-	<div id="michael-photo-container">
-		<img src="assets/MichaelBradley.jpg" alt="A picture of me in a suit smiling" id="michael-photo">
-	</div>
-	<div id="basic-info">
-		<div class="invisible-div">
-			<p><span class="text-highlight">website</span>@<span class="text-highlight">MichaelBradley</span></p>
-			<p>----------------------</p>
-			<p><span class="text-highlight">Program</span>: Bachelor of Computer Science</p>
-			<p><span class="text-highlight">Stream</span>: AI & Machine Learning</p>
-			<p><span class="text-highlight">University</span>: Carleton (Ottawa)</p>
-			<p><span class="text-highlight">Major CGPA</span>: 11.68/12 (A+)</p>
-			<p><span class="text-highlight">Languages</span>: Python, TypeScript, Java, C,</p>
-			<p class="whitespace">           C++, Haskell, SQL, Rust, Bash</p>
-			<p><span class="text-highlight">Applying for</span>: Co-op term May-August 2024</p>
+<div id="fetch-container">
+	<div id="fetch">
+		<!--TODO: Automate screenshot of this div as thumb.png?-->
+		<div id="michael-photo-container">
+			<picture>
+				<source srcset="assets/MichaelBradley.jxl" type="image/jxl">
+				<source srcset="assets/MichaelBradley.avif" type="image/avif">
+				<source srcset="assets/MichaelBradley.webp" type="image/webp">
+				<img src="assets/MichaelBradley.jpeg" alt="A picture of me in a suit smiling" id="michael-photo">
+			</picture>
 		</div>
-		<p><br /></p>
-		<p class="blocks">
-			<span style="color: var(--color0)">███</span><span style="color: var(--color1)">███</span><span style="color: var(--color2)">███</span><span style="color: var(--color3)">███</span><span style="color: var(--color4)">███</span><span style="color: var(--color5)">███</span><span style="color: var(--color6)">███</span><span style="color: var(--color7)">███</span>
-		</p>
-		<p class="blocks">
-			<span style="color: var(--color8)">███</span><span style="color: var(--color9)">███</span><span style="color: var(--color10)">███</span><span style="color: var(--color11)">███</span><span style="color: var(--color12)">███</span><span style="color: var(--color13)">███</span><span style="color: var(--color14)">███</span><span style="color: var(--color15)">███</span>
-		</p>
+		<div id="basic-info">
+			<div class="invisible-div">
+				<p><span class="text-highlight">website</span>@<span class="text-highlight">MichaelBradley</span></p>
+				<p>----------------------</p>
+				<p><span class="text-highlight">Degree</span>: Bachelor of Computer Science</p>
+				<p><span class="text-highlight">University</span>: Carleton</p>
+				<p><span class="text-highlight">Major CGPA</span>: 11.50/12 (A+)</p>
+				<p><span class="text-highlight">Languages</span>: C/C++, Python, TypeScript</p>
+				<p><span class="text-highlight">Skills</span>: Linux, Git, Agile</p>
+				<p><span class="text-highlight">Work Experience</span>: 2 years</p>
+				<p><span class="text-highlight">Location</span>: Toronto or Remote</p>
+				<p><span class="text-highlight">Applying for</span>: Full-time starting Feb 2025</p>
+			</div>
+			<p><br /></p>
+			<p class="blocks">
+				<span style="color: var(--color0)">███</span><span style="color: var(--color1)">███</span><span style="color: var(--color2)">███</span><span style="color: var(--color3)">███</span><span style="color: var(--color4)">███</span><span style="color: var(--color5)">███</span><span style="color: var(--color6)">███</span><span style="color: var(--color7)">███</span>
+			</p>
+			<p class="blocks">
+				<span style="color: var(--color8)">███</span><span style="color: var(--color9)">███</span><span style="color: var(--color10)">███</span><span style="color: var(--color11)">███</span><span style="color: var(--color12)">███</span><span style="color: var(--color13)">███</span><span style="color: var(--color14)">███</span><span style="color: var(--color15)">███</span>
+			</p>
+		</div>
 	</div>
 </div>
 <div class="links">
 	<a href="https://github.com/MichaelMBradley" title="GitHub account">
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" width="49.6" height="51.2" aria-description="GitHub icon">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" width="5em" aria-description="GitHub icon">
 			<!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
 			<path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
 		</svg>
 	</a>
 	<a href="https://www.linkedin.com/in/michaelmbradley/" title="LinkedIn account">
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="44.8" height="51.2" aria-description="LinkedIn icon">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="5em" aria-description="LinkedIn icon">
 			<!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
 			<path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
 		</svg>
 	</a>
+	<!-- TODO: Find better icon than "file" -->
+	<a href="https://mmbradley.ca/resume.pdf" title="My Résumé">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="4.25em" aria-description="CV icon">
+			<!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+			<path d="M320 464c8.8 0 16-7.2 16-16l0-288-80 0c-17.7 0-32-14.3-32-32l0-80L64 48c-8.8 0-16 7.2-16 16l0 384c0 8.8 7.2 16 16 16l256 0zM0 64C0 28.7 28.7 0 64 0L229.5 0c17 0 33.3 6.7 45.3 18.7l90.5 90.5c12 12 18.7 28.3 18.7 45.3L384 448c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 64z" />
+		</svg>
+	</a>
 	<a rel="me" href="https://mstdn.ca/@michaelbradley" title="Mastodon account">
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="44.8" height="51.2" aria-description="Mastodon icon">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="5em" aria-description="Mastodon icon">
 			<!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
 			<path d="M433 179.1c0-97.2-63.7-125.7-63.7-125.7-62.5-28.7-228.6-28.4-290.5 0 0 0-63.7 28.5-63.7 125.7 0 115.7-6.6 259.4 105.6 289.1 40.5 10.7 75.3 13 103.3 11.4 50.8-2.8 79.3-18.1 79.3-18.1l-1.7-36.9s-36.3 11.4-77.1 10.1c-40.4-1.4-83-4.4-89.6-54a102.5 102.5 0 0 1 -.9-13.9c85.6 20.9 158.7 9.1 178.8 6.7 56.1-6.7 105-41.3 111.2-72.9 9.8-49.8 9-121.5 9-121.5zm-75.1 125.2h-46.6v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.3V197c0-58.5-64-56.6-64-6.9v114.2H90.2c0-122.1-5.2-147.9 18.4-175 25.9-28.9 79.8-30.8 103.8 6.1l11.6 19.5 11.6-19.5c24.1-37.1 78.1-34.8 103.8-6.1 23.7 27.3 18.4 53 18.4 175z"/>
 		</svg>
 	</a>
-</div>
-<div class="info-section">
-	<h1>Projects</h1>
-	<div class="info-group">
-		<h2>dotfiles</h2>
-		<p>
-			I use a highly customized Arch Linux installation on my desktop and laptop, so I created the repository to help sync the configuration files.
-		</p>
-		<a href="https://github.com/MichaelMBradley/dotfiles">
-			<img src="https://raw.githubusercontent.com/MichaelMBradley/dotfiles/master/laptop.png" alt="Screenshot of several windows open in an Arch Linux installation" />
-		</a>
-	</div>
-	<div class="info-group">
-		<h2>Holiday Cards</h2>
-		<p>
-			Created a GitHub Pages site to securely deliver private messages to friends and family.
-			When given a link with a decryption key, the appropriate message would be unencrypted, run through a custom minimal Markdown parser, and displayed to the recipient.
-			Along with the message, a deterministically random "snowflake" graphic would be generated with the <a href="https://p5js.org/">p5.js</a> library for each unique recipient.
-		</p>
-		<a href="https://github.com/MichaelMBradley/holidaycards2022">
-			<img src="assets/HolidayCard.png" alt="Screenshot of an example holiday card" />
-		</a>
-	</div>
-	<div class="info-group">
-		<h2>Heartbeat Analyzer</h2>
-		<p>
-			Analyzes the (fictional) heartbeat of the user, and displays the statistics it generates.
-			Completed in a group of 4 for a class project using Qt C++.
-			I personally worked on the heart rate sensor data generation, functionality to save sessions, various bug fixes (including tracking down memory leaks), as well as some documentation in the planning stage before any code was written.
-		</p>
-		<a href="https://github.com/TahaInc/heartwave">
-			<img src="https://raw.githubusercontent.com/TahaInc/heartwave/main/images/screenshot_2.png" alt="Screenshot of the graphical user interface" />
-		</a>
-	</div>
-	<div class="info-group">
-		<h2>Multi-Agent Pathfinding</h2>
-		<p>
-			Fills a grid with various types of "trash", and then simulates agents moving through the grid to clean it up.
-			Completed in a group of 3 for a class project using Python.
-			I personally came up with the controller API, implemented the faster "independent" agent controllers, and implemented the UI using the <a href="https://textual.textualize.io/">Textual</a> framework (including a variety of helpful debugging and configuration tools).
-		</p>
-		<a href="https://github.com/vishalparmar01/comp3106-Project">
-			<img src="https://raw.githubusercontent.com/vishalparmar01/comp3106-Project/main/docs/example.png" alt="Screenshot of the simulation terminal user interface" />
-		</a>
-	</div>
-	<div class="info-group">
-		<h2>Personal Website</h2>
-		<p>
-			What you're looking at right now!
-			This website is designed to work without any JavaScript, it's pure HTML+CSS.
-		</p>
-		<a href="https://github.com/MichaelMBradley/MichaelMBradley.github.io">
-			<div id="droste" aria-label="An image of the 'fetch' section above"></div>
-		</a>
-	</div>
-</div>
-<div class="info-section">
-	<h1>Accomplishments</h1>
-	<ul>
-		<li>2023 - Nominated for Carleton University's Co-op of the Year award</li>
-		<li>2021 - Awarded the Dean's Summer Research Internship</li>
-	</ul>
-</div>
-<div class="info-section">
-	<h1>Work Experience</h1>
-	<div class="info-group">
-		<h2>Emids</h2>
-		<p>
-			My most recent co-op job was as a Software Developer at Emids, where I worked on their InQ Telehealth solution.
-			While there, I contributed to a new service (the RAAM One Front Door) throughout its entire development life cycle, adding new pages and features, and optimizing UI components.
-		</p>
-		<p class="indent">
-			Most of my work was done on the front-end in TypeScript using React, which prior to the position I had almost no experience in but picked up so quickly that I became one of the driving forces in enforcing stricter typing and reducing the use of "Any".
-			Despite having never used React before, I became so proficient in it that by the end my superiors informed me that I was one of the best co-ops they’d ever had and nominated me for Carleton University’s Co-op of the Year award.
-		</p>
-		<p class="indent">
-			I also added new features to the back-end after quickly learning the in-house functional language it was written in.
-			During this work I found that working on something that made its way directly to customers gave me an extra drive to improve my work, as every extra little bit that I did might make someone else’s life easier.
-		</p>
-		<p>May-Aug 2023</p>
-	</div>
-	<div class="info-group">
-		<h2>Ross (part-time)</h2>
-		<p>
-			After my 8-month co-op term at Ross Video was complete, I was re-hired on a part-time basis to research tracing Python library function call stacks to automatically generate unit tests, as well as updates to the structure of their internal testing framework.
-		</p>
-		<p>Jan-Mar 2023</p>
-	</div>
-	<div class="info-group">
-		<h2>Ross</h2>
-		<p>
-			At Ross Video I completed an 8-month co-op where I worked as a Test Automation & Software Developer (a DevOps role) on the Enablement Team.
-			I started by using an in-house testing framework to automate web app security tests that needed to be run as part of any product release to ensure that no vulnerabilities had been introduced.
-			By integrating the OWASP ZAP and tenable.io Python APIs with an internally developed testing framework, I made it simpler to ensure that the web apps we were releasing were safe.
-		</p>
-		<p class="indent">
-			I then made a large refactor to the testing framework itself.
-			In the refactor I edited about 15 thousand lines of Python code to standardize the return types of the internal library functions, improve older test cases which were not well-written, and add type-hinting to provide additional information to developers.
-		</p>
-		<p class="indent">
-			Finally, I used Jenkins to create generic CI/CD jobs that could build and test the firmware for any of the products we were working on which help developers be confident that the features they’re introducing are not silently adding bugs.
-			As the feature set of Jenkins did not meet our needs, I became proficient in shell scripting to add any missing features required to create our pipelines.
-		</p>
-		<p>May-Dec 2022</p>
-	</div>
-	<div class="info-group">
-		<h2>Carleton University</h2>
-		<p>
-			In 2021, I was awarded the Dean’s Summer Research Internship.
-			I worked under a Carleton Professor in the Graphics, Imaging, and Games Lab examining using circle-packing to create a polycurve enclosing an arbitrary area.
-			This work was done with the goal of being a tool for future GIGL publications in image stylization.
-			After writing this code in Java with the Processing graphics library, I used LaTeX to create a report for the lab.
-			The work was done remotely and independently, and it taught me how to effectively manage my own time and create realistic deadlines.
-		</p>
-		<p>May-Aug 2021</p>
-	</div>
-</div>
-<div class="info-section">
-	<h1>Notable Courses</h1>
-	<div class="info-group">
-		<h2>Introduction to Machine Learning</h2>
-		<p>
-			Progressed from basic implementations of gradient descent on simple linear models to using SciPy functions to optimize kernel-based models on the outputs of unsupervised learning methods like principal component analysis.
-			Analysed neural networks of various types (deep, convolutional, recurrent), but a fuller understanding and implementation will come about as a result of a course I am currently taking dedicated to neural nets.
-		</p>
-		<p>A+</p>
-	</div>
-	<div class="info-group">
-		<h2>Introduction to Artificial Intelligence</h2>
-		<p>
-			Analyzed alternate methods of computer intelligence including graph search, Bayesian inference, fuzzy rules-based systems and reinforcement learning.
-			Final project was to create controllers for three garbage-collecting robots operating on a simple grid to collect trash in an optimal manner.
-			I optimized my agents with a heuristic penalizing potential targets based on their distance from the convex hull of the set of trash, ensuring that they would work their way inwards instead of taking a random walk.
-		</p>
-		<p>A+</p>
-	</div>
-	<div class="info-group">
-		<h2>Introduction to Robotics</h2>
-		<p>
-			Built up knowledge of robotic control techniques in the <a href="https://cyberbotics.com">Webots</a> simulator.
-			Started from basic wheel control, and moved on to simple video analysis, LiDAR, object detection, terrain navigation, and pathfinding in complex environments.
-			Final (group) project was to create controllers for 3 robots that would run in sequence to detect, pick up, and move small objects to specified endpoints.
-		</p>
-		<p>A+</p>
-	</div>
-	<div class="info-group">
-		<h2>Computer Game Design and Development</h2>
-		<p>
-			Created simple interactive programs using C++ and OpenGL, including programming some basic shaders in GLSL.
-			Final project was to create a more involved game including a larger scrolling environment, basic AI enemies, win conditions, and more advanced controls.
-			I was forced to complete my final group project individually after my group-mates dropped the course, and still managed to receive an A.
-		</p>
-		<p>A+</p>
-	</div>
-	<div class="info-group">
-		<h2>Quantum Computing and Information</h2>
-		<p>
-			Learned the mathematical basis of quantum algorithms, and analyzed how some standard algorithms operate on entangled qubits to probabilistically determine the answer in asymptotically better runtime.
-		</p>
-		<p>A+</p>
-	</div>
-	<div class="info-group">
-		<h2>In Progress:</h2>
-		<ul>
-			<li>Neural Networks</li>
-			<li>Computer Vision</li>
-			<li>Computer Graphics</li>
-		</ul>
-	</div>
 </div>
 </body>
 </html>
